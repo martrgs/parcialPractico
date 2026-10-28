@@ -1,0 +1,134 @@
+:host {
+  --inventory-background: #406c8a;
+  --card-background: #dceaf3;
+  --toolbar-background: #1d4058;
+  --toolbar-text: #ffffff;
+  --button-background: #84b4d3;
+  --button-text: #ffffff;
+  --button-background-hover: #285a79;
+  --button-critical-background: #f1aaa7;
+  --button-critical-background-hover: #c2341b;
+}
+
+ion-content {
+  --background: var(--inventory-background);
+}
+
+ion-card {
+  --background: var(--card-background);
+  margin: 0 0 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgb(34 54 84 / 8%);
+}
+
+.topbar {
+  --background: var(--toolbar-background);
+  --color: var(--toolbar-text);
+}
+
+.action-button {
+  --background: var(--button-background);
+  --background-hover: var(--button-background-hover);
+  --color: var(--button-text);
+}
+
+.action-button.stock-critico {
+  --background: var(--button-critical-background);
+  --background-hover: var(--button-critical-background-hover);
+}
+
+.producto-modal .action-button {
+  --background: #84b4d3;
+}
+
+.resumen {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.resumen div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #406c8a;
+}
+
+.resumen strong {
+  color: #f8f9fa;
+  font-size: 1.5rem;
+}
+
+.resumen span {
+  color: #f2f3f5;
+  font-size: 0.85rem;
+}
+
+.estado {
+  margin: 12px 0;
+  color: #b9d0eb;
+  text-align: center;
+}
+
+.error {
+  color: var(--ion-color-danger);
+}
+
+ion-avatar {
+  --border-radius: 8px;
+  height: 56px;
+  width: 56px;
+}
+
+ion-avatar img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+ion-label h2 {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+ion-label p {
+  margin: 4px 0;
+}
+
+.producto-modal {
+  text-align: center;
+}
+
+.producto-modal-imagen {
+  display: block;
+  height: 180px;
+  margin: 0 auto 16px;
+  object-fit: cover;
+  width: 180px;
+}
+
+.producto-modal ion-item {
+  --highlight-color-focused: var(--toolbar-background);
+  --highlight-color-valid: var(--toolbar-background);
+  --highlight-color-invalid: var(--ion-color-danger);
+  text-align: left;
+}
+
+.producto-modal ion-input {
+  --highlight-color-focused: var(--toolbar-background);
+  --highlight-color-valid: var(--toolbar-background);
+}
+
+@media (max-width: 520px) {
+  ion-item {
+    --inner-padding-end: 0;
+  }
+
+  ion-button[slot='end'] {
+    --padding-start: 8px;
+    --padding-end: 8px;
+    font-size: 0.75rem;
+  }
+}
